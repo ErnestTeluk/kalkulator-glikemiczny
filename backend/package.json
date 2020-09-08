@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "glycemic calculator backend",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErnestTeluk/kalkulator-glikemiczny.git"
+  },
+  "author": "Ernest Teluk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErnestTeluk/kalkulator-glikemiczny/issues"
+  },
+  "homepage": "https://github.com/ErnestTeluk/kalkulator-glikemiczny#readme"
+}
