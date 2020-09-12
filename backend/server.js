@@ -24,7 +24,7 @@ mongoose
   });
 
 const corsOptions = {
-  origin: 'http:/localhost:8000',
+  origin: 'http://app:3000',
   optionsSuccessStatus: 200,
 };
 

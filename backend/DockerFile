@@ -1,0 +1,16 @@
+FROM node:12-alpine
+
+WORKDIR /var/src/server
+
+RUN \
+    apk add --no-cache python make g++ && \
+    apk add vips-dev fftw-dev --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/community --repository http://dl-3.alpinelinux.org/alpine/edge/main && \
+    rm -fR /var/cache/apk/*
+
+RUN apk --no-cache add pkgconfig autoconf automake libtool nasm build-base zlib-dev
+
+COPY ./package.json .
+
+RUN npm install --save
+
+EXPOSE 8080
