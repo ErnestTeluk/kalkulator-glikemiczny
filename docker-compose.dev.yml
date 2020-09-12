@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  server:
+    volumes:
+      - /var/src/server/node_modules
+      - './backend:/var/src/server'
+    ports:
+      - '8080:8080'
+    build:
+      context: ./backend
+      dockerfile: DockerFile
+    environment:
+      MONGODB_ATLASS_URI: ${MONGODB_ATLASS_URI}
+      JWT_TOKEN_SECRET: ${JWT_TOKEN_SECRET}
+    command: npm run dev
+  app:
+    volumes:
+      - /var/src/app/node_modules
+      - './frontend:/var/src/app'
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    build:
+      context: ./frontend
+      dockerfile: DockerFile
+    depends_on:
+      - server
+    command: npm start
