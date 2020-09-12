@@ -8,7 +8,7 @@ export const SignIn = (formProps) => async (dispatch) => {
 
     dispatch({ type: AUTH_USER, payload: response.data.token });
     localStorage.setItem('token', response.data.token);
-    navigate('/overview');
+    navigate('/dashboard');
   } catch (e) {
     dispatch({ type: AUTH_ERROR, payload: 'Błędne dane logowania' });
   }
@@ -20,7 +20,7 @@ export const SignUp = (formProps) => async (dispatch) => {
 
     dispatch({ type: AUTH_USER, payload: response.data.token });
     localStorage.setItem('token', response.data.token);
-    navigate('/overview');
+    navigate('/dashboard');
   } catch (e) {
     dispatch({ type: AUTH_ERROR, payload: 'Email w użyciu' });
   }
