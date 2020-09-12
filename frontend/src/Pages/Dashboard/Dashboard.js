@@ -1,14 +1,16 @@
 import React from 'react';
 
-import SignOut from 'Components/Auth/SignOut/SignOut';
-import RequireAuth from 'Hoc/RequireAuth/RequireAuth';
+import Sidebar from 'Components/Sidebar/Sidebar';
+import { PageWrapper, SectionWrapper } from './Dashboard.styled';
 
 const Dashboard = () => (
-  <>
-    Silence is gold
-    <br />
-    <SignOut />
-  </>
+  <PageWrapper>
+    <Sidebar />
+    <SectionWrapper>
+      Silence is gold
+      <br />
+    </SectionWrapper>
+  </PageWrapper>
 );
 
-export default RequireAuth(Dashboard);
+export default Dashboard;
