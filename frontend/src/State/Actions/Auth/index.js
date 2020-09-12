@@ -1,10 +1,10 @@
-import serverApi from 'apis/serverApi';
-import { AUTH_USER, AUTH_ERROR, RESET_STATE } from 'state/actions/types';
-import { navigate } from 'gatsby';
+import ServerApi from 'Apis/ServerApi';
+import { AUTH_USER, AUTH_ERROR, RESET_STATE } from 'State/Actions/Types';
+import { navigate } from '@reach/router';
 
-export const signin = (formProps) => async (dispatch) => {
+export const SignIn = (formProps) => async (dispatch) => {
   try {
-    const response = await serverApi.post('/signin', formProps);
+    const response = await ServerApi.post('/signin', formProps);
 
     dispatch({ type: AUTH_USER, payload: response.data.token });
     localStorage.setItem('token', response.data.token);
@@ -14,9 +14,9 @@ export const signin = (formProps) => async (dispatch) => {
   }
 };
 
-export const signup = (formProps) => async (dispatch) => {
+export const SignUp = (formProps) => async (dispatch) => {
   try {
-    const response = await serverApi.post('/signup', formProps);
+    const response = await ServerApi.post('/signup', formProps);
 
     dispatch({ type: AUTH_USER, payload: response.data.token });
     localStorage.setItem('token', response.data.token);
@@ -26,7 +26,7 @@ export const signup = (formProps) => async (dispatch) => {
   }
 };
 
-export const signout = () => (dispatch) => {
+export const SignOut = () => (dispatch) => {
   localStorage.removeItem('token');
   dispatch({ type: RESET_STATE });
 };
