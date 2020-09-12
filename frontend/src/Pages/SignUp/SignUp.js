@@ -1,16 +1,17 @@
 import React from 'react';
 
 import LogoWhite from 'Assets/Image/LogoWhite.png';
+import LogoColor from 'Assets/Image/LogoColor.png';
 import SignBackground from 'Assets/Image/SignBackground.png';
 import Sign from 'Components/Auth/Sign/Sign';
 import SignOption from 'Components/Auth/SignOption/SignOption';
+import { PageWrapper, SignWrapper, Logo } from 'Pages/SignIn/SignIn.styled';
 import {
-  PageWrapper,
-  SignWrapper,
+  OptionWrapper,
+  SignOptionWrapper,
+  LogoMobileWrapper,
   LogoWrapper,
-  Logo,
-} from 'Pages/SignIn/SignIn.styled';
-import { OptionWrapper, SignOptionWrapper } from './SignUp.styled';
+} from './SignUp.styled';
 
 const SignUp = () => {
   const SignUpData = {
@@ -24,13 +25,16 @@ const SignUp = () => {
 
   return (
     <PageWrapper isReverse>
+      <LogoWrapper isDesktop>
+        <Logo src={LogoColor} />
+      </LogoWrapper>
       <SignWrapper>
         <Sign title={SignUpData.signTitle} text={SignUpData.signText} />
       </SignWrapper>
       <OptionWrapper imgUrl={SignBackground}>
-        <LogoWrapper>
+        <LogoMobileWrapper>
           <Logo src={LogoWhite} />
-        </LogoWrapper>
+        </LogoMobileWrapper>
         <SignOptionWrapper>
           <SignOption
             title={SignUpData.title}

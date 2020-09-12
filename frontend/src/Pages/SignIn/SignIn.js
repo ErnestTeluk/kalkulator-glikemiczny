@@ -26,7 +26,7 @@ const SignIn = () => {
   return (
     <PageWrapper>
       <SignContainer>
-        <LogoWrapper>
+        <LogoWrapper isDesktop>
           <Logo src={LogoColor} />
         </LogoWrapper>
         <SignWrapper>

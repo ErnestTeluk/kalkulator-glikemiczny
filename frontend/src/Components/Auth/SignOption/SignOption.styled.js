@@ -16,6 +16,7 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.Colors.white};
   text-align: center;
   margin-bottom: 20px;
+  padding: 0 20px;
 `;
 
 export const Text = styled.p`
@@ -25,7 +26,15 @@ export const Text = styled.p`
   color: ${({ theme }) => theme.Colors.white};
   text-align: center;
   margin-bottom: 20px;
-  padding: 0 100px;
+  padding: 0 20px;
+
+  ${({ theme }) => theme.Mq.desktop} {
+    padding: 0 25px;
+  }
+
+  ${({ theme }) => theme.Mq.bigDesktop} {
+    padding: 0 50px;
+  }
 `;
 
 export const ButtonText = styled.span`

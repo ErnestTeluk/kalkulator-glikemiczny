@@ -24,7 +24,7 @@ mongoose
   });
 
 const corsOptions = {
-  origin: 'http://docker.for.win.localhost:3000',
+  origin: 'http://localhost:3000',
   optionsSuccessStatus: 200,
 };
 

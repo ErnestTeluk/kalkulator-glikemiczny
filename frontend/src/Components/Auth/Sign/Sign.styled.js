@@ -7,7 +7,11 @@ export const SectionWrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   flex-flow: column;
-  padding-top: 300px;
+  padding: 50px 0 100px 0;
+
+  ${({ theme }) => theme.Mq.bigTablet} {
+    padding: 300px 0 0 0;
+  }
 `;
 
 export const FormWrapper = styled.div`
