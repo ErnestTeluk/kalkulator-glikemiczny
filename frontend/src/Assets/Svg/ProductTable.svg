@@ -5,13 +5,13 @@
 <g>
 	<rect x="37.8" y="18.65" style="fill:#FFFFFF;" width="4.26" height="4.22"/>
 	<rect x="27.03" y="29.46" style="fill:#FFFFFF;" width="4.19" height="4.26"/>
-	<rect x="27.03" y="24.03" style="fill:#FFFFFF;" width="4.19" height="4.26"/>
+	<rect id="productFirst" x="27.03" y="24.03" style="fill:#FFFFFF;" width="4.19" height="4.26"/>
 	<rect x="27.03" y="34.88" style="fill:#FFFFFF;" width="4.19" height="4.19"/>
 	<rect x="32.38" y="34.88" style="fill:#FFFFFF;" width="4.26" height="4.19"/>
-	<rect x="32.38" y="18.65" style="fill:#FFFFFF;" width="4.26" height="4.22"/>
+	<rect id="productSecond" x="32.38" y="18.65" style="fill:#FFFFFF;" width="4.26" height="4.22"/>
 	<rect x="20.92" y="34.88" style="fill:#FFFFFF;" width="4.94" height="4.19"/>
 	<rect x="20.92" y="18.65" style="fill:#FFFFFF;" width="4.94" height="4.22"/>
-	<rect x="37.8" y="34.88" style="fill:#FFFFFF;" width="4.26" height="4.19"/>
+	<rect id="productThird" x="37.8" y="34.88" style="fill:#FFFFFF;" width="4.26" height="4.19"/>
 	<rect x="37.8" y="24.03" style="fill:#FFFFFF;" width="4.26" height="4.26"/>
 	<rect x="32.38" y="29.46" style="fill:#FFFFFF;" width="4.26" height="4.26"/>
 	<path style="fill:#FFFFFF;" d="M30,0.1c-16.56,0-30,13.44-30,30s13.44,30,30,30s30-13.44,30-30S46.57,0.1,30,0.1z M14.18,24.04
