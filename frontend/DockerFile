@@ -13,6 +13,6 @@ RUN apk --no-cache add pkgconfig autoconf automake libtool nasm build-base zlib-
 
 COPY ./package.json .
 
-RUN npm install --save
+RUN yarn install
 
 EXPOSE 3000

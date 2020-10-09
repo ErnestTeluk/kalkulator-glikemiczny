@@ -1,7 +1,6 @@
 require('dotenv').config();
 const express = require('express');
 const http = require('http');
-const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const cors = require('cors');
 const mongoose = require('mongoose');
@@ -30,7 +29,9 @@ const corsOptions = {
 
 app.use(morgan('combined'));
 app.use(cors(corsOptions));
-app.use(bodyParser.json({ type: '*/*' }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use('/uploads', express.static('uploads'));
 router(app);
 
 const port = process.env.PORT || 8080;

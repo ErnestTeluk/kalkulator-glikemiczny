@@ -4,6 +4,7 @@ import {
   SvgWrapper,
   TextWrapper,
 } from 'Components/Sidebar/LinkItems/LinkItems.styled';
+import { AvatarCircle } from 'Components/Sidebar/Avatar/Avatar.styled';
 
 export const LogoWrapper = styled.div`
   width: 100%;
@@ -27,21 +28,6 @@ export const LogoWrapper = styled.div`
   }
 `;
 
-export const Avatar = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 200px;
-  max-width: 40px;
-  max-height: 40px;
-  position: relative;
-  border: 2px solid ${({ theme }) => theme.Colors.white};
-  background-color: ${({ theme }) => theme.Colors.purple};
-  border-radius: 50%;
-  transition: max-width 0.3s ease-in-out, max-height 0.3s ease-in-out;
-`;
-
 export const SectionWrapper = styled.div`
   width: 300px;
   max-width: 100px;
@@ -59,7 +45,7 @@ export const SectionWrapper = styled.div`
     padding: 0 49px;
   }
 
-  &:hover ${Avatar} {
+  &:hover ${AvatarCircle} {
     max-width: 200px;
     max-height: 200px;
   }
@@ -87,6 +73,13 @@ export const BackgroundWrapper = styled.div`
   background-size: cover;
 `;
 
+export const LinksWrapper = styled.div`
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-flow: column;
+`;
+
 export const AvatarWrapper = styled.div`
   width: 100%;
   height: auto;
@@ -94,18 +87,4 @@ export const AvatarWrapper = styled.div`
   justify-content: center;
   align-items: center;
   padding: 50px 0;
-`;
-
-export const AvatarText = styled.span`
-  font-family: ${({ theme }) => theme.FontFamily.Montserrat};
-  font-size: ${({ theme }) => theme.FontSize.m};
-  font-weight: ${({ theme }) => theme.FontWeight.bold};
-  color: ${({ theme }) => theme.Colors.white};
-`;
-
-export const LinksWrapper = styled.div`
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-flow: column;
 `;

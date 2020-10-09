@@ -3,14 +3,13 @@ import React from 'react';
 import LogoWhite from 'Assets/Image/LogoWhite.png';
 import SignBackground from 'Assets/Image/SignBackground.png';
 import LinkItems from 'Components/Sidebar/LinkItems/LinkItems';
+import Avatar from 'Components/Sidebar/Avatar/Avatar';
 import {
   SectionWrapper,
   LogoWrapper,
   StyledImage,
   BackgroundWrapper,
   AvatarWrapper,
-  Avatar,
-  AvatarText,
   LinksWrapper,
 } from './Sidebar.styled';
 
@@ -21,9 +20,7 @@ const Sidebar = () => (
     </LogoWrapper>
     <BackgroundWrapper imgUrl={SignBackground}>
       <AvatarWrapper>
-        <Avatar>
-          <AvatarText>E</AvatarText>
-        </Avatar>
+        <Avatar />
       </AvatarWrapper>
       <LinksWrapper>
         <LinkItems />
