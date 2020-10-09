@@ -12,6 +12,7 @@ export const LinkItem = styled(Link)`
   border: none;
   background-color: transparent;
   cursor: pointer;
+  overflow: hidden;
 
   &:last-child() {
     margin-bottom: 0px;
