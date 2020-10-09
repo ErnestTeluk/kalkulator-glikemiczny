@@ -13,12 +13,12 @@ const storage = multer.diskStorage({
     cb(null, './uploads/');
   },
   filename: function (req, file, cb) {
-    cb(null, new Date().toISOString + `-${file.fieldname}`);
+    cb(null, new Date().toISOString() + '-' + file.originalname);
   }
 });
 
 const fileFilter = (req, file, cb) => {
-  if (file.minetype === "image/jpeg" || file.minetype === "image/png") {
+  if (file.mimetype === "image/jpeg" || file.mimetype === "image/png") {
     cb(null, true);
   } else {
     cb(new Error('wrong file type'), false);
@@ -36,5 +36,6 @@ module.exports = function (app) {
   app.post('/api/v1/signin', requireSignin, Authentication.signin);
   app.post('/api/v1/signup', Authentication.signup);
   app.post('/api/v1/createavatar', upload.single('avatar'), requireAuth, Avatar.CreateAvatar);
-  app.get('/api/v1/fetchavatar', requireAuth, Avatar.FetchAvatar);
+  app.get('/api/v1/fetchavatar/:id', requireAuth, Avatar.FetchAvatar);
+  app.patch('/api/v1/updateavatar/:id', upload.single('avatar'), requireAuth, Avatar.UpdateAvatar);
 };
