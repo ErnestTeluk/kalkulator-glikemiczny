@@ -33,8 +33,9 @@ const upload = multer({
 });
 
 module.exports = function (app) {
-  app.post('/api/v1/signin', requireSignin, Authentication.signin);
-  app.post('/api/v1/signup', Authentication.signup);
+  app.post('/api/v1/signin', requireSignin, Authentication.SignIn);
+  app.post('/api/v1/signup', Authentication.SignUp);
+  app.get('/api/v1/fetchuserdata/:id', requireAuth, Authentication.FetchUserData);
   app.post('/api/v1/createavatar', upload.single('avatar'), requireAuth, Avatar.CreateAvatar);
   app.get('/api/v1/fetchavatar/:id', requireAuth, Avatar.FetchAvatar);
   app.patch('/api/v1/updateavatar/:id', upload.single('avatar'), requireAuth, Avatar.UpdateAvatar);
