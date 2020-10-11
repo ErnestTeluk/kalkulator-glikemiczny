@@ -10,11 +10,11 @@ function tokenForUser(user) {
   );
 }
 
-exports.signin = function (req, res, next) {
+exports.SignIn = function (req, res, next) {
   res.send({ token: tokenForUser(req.user) });
 };
 
-exports.signup = function (req, res, next) {
+exports.SignUp = function (req, res, next) {
   const email = req.body.email;
   const password = req.body.password;
   const name = req.body.name;
@@ -45,5 +45,17 @@ exports.signup = function (req, res, next) {
 
       res.json({ token: tokenForUser(user) });
     });
+  });
+};
+
+exports.FetchUserData = function (req, res) {
+  let id = req.params.id;
+  User.findOne({ _id: id }, function (err, data) {
+    if (err) {
+      res.json(err)
+    } else {
+      const userData = { _id: data._id, name: data.name }
+      res.json(userData);
+    }
   });
 };

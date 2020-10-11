@@ -13,7 +13,7 @@ services:
     environment:
       MONGODB_ATLASS_URI: ${MONGODB_ATLASS_URI}
       JWT_TOKEN_SECRET: ${JWT_TOKEN_SECRET}
-    command: npm run dev
+    command: yarn run dev
   app:
     volumes:
       - /var/src/app/node_modules
@@ -26,4 +26,4 @@ services:
       dockerfile: DockerFile
     depends_on:
       - server
-    command: npm start
+    command: yarn start
