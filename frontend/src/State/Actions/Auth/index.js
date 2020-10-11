@@ -1,5 +1,11 @@
 import ServerApi from 'Apis/ServerApi';
-import { AUTH_USER, AUTH_ERROR, RESET_STATE } from 'State/Actions/Types';
+import {
+  AUTH_USER,
+  AUTH_ERROR,
+  RESET_STATE,
+  RESET_USER_DATA,
+  RESET_AVATAR,
+} from 'State/Actions/Types';
 import { navigate } from '@reach/router';
 
 export const SignIn = (formProps) => async (dispatch) => {
@@ -27,6 +33,8 @@ export const SignUp = (formProps) => async (dispatch) => {
 };
 
 export const SignOut = () => (dispatch) => {
-  localStorage.removeItem('token');
   dispatch({ type: RESET_STATE });
+  dispatch({ type: RESET_USER_DATA });
+  dispatch({ type: RESET_AVATAR });
+  localStorage.removeItem('token');
 };

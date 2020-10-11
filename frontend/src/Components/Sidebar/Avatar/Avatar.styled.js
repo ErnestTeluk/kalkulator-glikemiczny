@@ -21,3 +21,12 @@ export const AvatarCircle = styled.div`
   border-radius: 50%;
   transition: max-width 0.3s ease-in-out, max-height 0.3s ease-in-out;
 `;
+
+export const AvatarImage = styled.img`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+`;

@@ -15,8 +15,12 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "paths": ["./src"],
-        "extensions": [".js"]
+        "paths": [
+          "./src"
+        ],
+        "extensions": [
+          ".js"
+        ]
       }
     }
   },
@@ -24,6 +28,15 @@
     "react/jsx-filename-extension": 0,
     "import/prefer-default-export": 0,
     "import/no-unresolved": 0,
-    "react/jsx-props-no-spreading": 0
+    "react/jsx-props-no-spreading": 0,
+    "camelcase": [
+      "error",
+      {
+        "allow": [
+          "jwt_decode"
+        ]
+      }
+    ],
+    "no-underscore-dangle": 0
   }
 }
