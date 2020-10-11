@@ -71,6 +71,7 @@ export const BackgroundWrapper = styled.div`
   background-image: url(${(props) => props.imgUrl});
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 `;
 
 export const LinksWrapper = styled.div`
