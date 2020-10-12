@@ -10,16 +10,11 @@ export default (ChildComponent) => {
     const dispatch = useDispatch();
 
     function GetSiderbarData() {
-      dispatch(FetchUserData());
-    }
-
-    function GetAvatar() {
-      dispatch(FetchAvatar(id));
+      dispatch(FetchUserData()).then(() => dispatch(FetchAvatar(id)));
     }
 
     useEffect(() => {
       GetSiderbarData();
-      GetAvatar();
     });
 
     return <ChildComponent />;

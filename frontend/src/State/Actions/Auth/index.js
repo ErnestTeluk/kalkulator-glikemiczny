@@ -5,6 +5,7 @@ import {
   RESET_STATE,
   RESET_USER_DATA,
   RESET_AVATAR,
+  SET_LOADING,
 } from 'State/Actions/Types';
 import { navigate } from '@reach/router';
 
@@ -36,5 +37,6 @@ export const SignOut = () => (dispatch) => {
   dispatch({ type: RESET_STATE });
   dispatch({ type: RESET_USER_DATA });
   dispatch({ type: RESET_AVATAR });
+  dispatch({ type: SET_LOADING, payload: true });
   localStorage.removeItem('token');
 };
